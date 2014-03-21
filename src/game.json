@@ -1,0 +1,7 @@
+[
+	{"name" : "Test", "url" : "client.js", "server" : false, "client" : true},
+	{"name" : "Test", "url" : "serverOnly.js", "server" : true, "client" : false}
+	
+	
+	
+]
