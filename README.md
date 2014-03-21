@@ -1,4 +1,4 @@
-BridgeJS
+Prototyping in Javascript
 ========
 
-A javascript cardgame implementation of bridge
+Can it be done? FIND OUT (NOT) NOW!
