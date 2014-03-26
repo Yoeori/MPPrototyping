@@ -6,6 +6,16 @@
 		{{#jsFiles}}{{#client}}
 		<script type="text/javascript" src="/js/{{url}}"></script>
 		{{/client}}{{/jsFiles}}
+		
+		<script type="text/javascript">
+			
+		window.onload = function() {
+			var socket = io.connect('http://localhost:3000');
+			socket.on('message', function (data) {
+				console.log(data);
+			});
+		}
+		</script>
 	</head>
 	<body>
 		<h1>{{ title }}</h1>

@@ -1,4 +1,5 @@
 [
+	{"name" : "SocketIO", "url" : "../socket.io/socket.io.js", "server" : false, "client" : true},
 	{"name" : "Test", "url" : "client.js", "server" : false, "client" : true},
 	{"name" : "Test", "url" : "serverOnly.js", "server" : true, "client" : false}
 	

@@ -7,7 +7,16 @@ var express = require("express"),
 	gameFiles = require("./game"),
 	server = http.createServer(app);
 	
-GLOBAL["io"] = require("socket.io").listen(server);
+GLOBAL["io"] = require("socket.io").listen(server, { log: false });
+
+io.sockets.on('connection', function (socket) {
+	socket.emit('message', { message: 'welcome to the chat' });
+	console.log("User connected");
+	socket.on('disconnect', function() { 
+		console.log("User disconnected");
+	});
+});
+
 GLOBAL["GAME"] = {gameFiles: gameFiles};
 
 var game = require("./js/server");
