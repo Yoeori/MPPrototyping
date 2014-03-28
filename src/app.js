@@ -10,8 +10,10 @@ var express = require("express"),
 GLOBAL["io"] = require("socket.io").listen(server, { "log level": 2 });
 
 io.sockets.on('connection', function (socket) {
-	socket.emit('message', { message: 'welcome to the chat' });
-	console.log("User connected");
+
+		socket.emit('packet', {id: 2});
+	
+		console.log("User connected");
 	socket.on('disconnect', function() { 
 		console.log("User disconnected");
 	});
@@ -31,6 +33,8 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/sml", express.static(path.join(__dirname, "sml")));
+app.use("/fonts", express.static(path.join(__dirname, "fonts")));
+app.use("/sound", express.static(path.join(__dirname, "sound")));
 var blockedJS = [];
 for(gameFile in GAME.gameFiles) {
 	if(gameFiles[gameFile].client === false) 

@@ -16,3 +16,8 @@ canvas {
 	margin-left: -640px;
 	margin-top: -360px;
 }
+@font-face {
+		font-family: 'victor';
+		font-style: normal;
+		src: url(../fonts/victor-pixel.ttf);
+}
