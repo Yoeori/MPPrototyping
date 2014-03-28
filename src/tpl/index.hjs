@@ -6,30 +6,6 @@
 		{{#jsFiles}}{{#client}}
 		<script type="text/javascript" src="/js/{{url}}"></script>
 		{{/client}}{{/jsFiles}}
-		
-		<script type="text/javascript">
-			
-		window.onload = function() {
-			clientNetHandler = new ClientNetHandler({host : "localhost", port : 3000});
-			var meter = new FPSMeter("", {
-				interval:  100,     // Update interval in milliseconds.
-				toggleOn:  '', // Toggle between show 'fps' and 'ms' on this event.
-				decimals:  0,       // Number of decimals in FPS number. 1 = 59.9, 2 = 59.94, ...
-				maxFps:    60,      // Max expected FPS value.
-				threshold: 100,     // Minimal tick reporting interval in milliseconds.
-				// Theme
-				theme: 'light', // Meter theme. Build in: 'dark', 'light', 'transparent', 'colorful'.
-				heat:  0,      // Allow themes to use coloring by FPS heat. 0 FPS = red, maxFps = green.
-
-				// Graph
-				graph:   1, // Whether to show history graph.
-				history: 20 // How many history states to show in a graph.
-			});
-			setInterval(function() {
-				meter.tick();
-			}, 1000/60);
-		}
-		</script>
 	</head>
 	<body>
 		<canvas width="1280px" height="720px"></canvas>

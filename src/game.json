@@ -1,6 +1,6 @@
 [
 	{"name" : "Class", "url" : "class.js", "server" : false, "client" : true},
-	{"name" : "fps", "url" : "fpsmeter.js", "server" : false, "client" : true},
+	{"name" : "fps", "url" : "fpsmeter.js", "server" : false, "client" : false},
 	{"name" : "SocketIO", "url" : "../socket.io/socket.io.js", "server" : false, "client" : true},
 	{"name" : "clientNetHandler", "url" : "network/clientNetHandler.js", "server" : false, "client" : true},
 	{"name" : "Test", "url" : "client.js", "server" : false, "client" : true},

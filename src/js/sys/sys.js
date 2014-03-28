@@ -133,8 +133,3 @@ function ReadTick() {
 }
 window.onfocus = function() { if(game instanceof Game) game.paused = false; };
 window.onblur = function() { if(game instanceof Game) game.paused = true; };
-window.onload = function() {
-	clientNetHandler = new ClientNetHandler({host : "localhost", port : 3000});
-	init();
-	
-}
