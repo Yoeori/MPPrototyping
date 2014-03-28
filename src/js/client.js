@@ -1,5 +1,4 @@
-var canvas = document.getElementById('GameCanvas');
-var ctx = canvas.getContext('2d');
+var canvas, ctx;
 function NextGaussian() {
 	return (Math.random()*2-1)+(Math.random()*2-1)+(Math.random()*2-1);
 }
@@ -98,43 +97,19 @@ var game, gameStarter;
 var FPS = 60;
 function init() {
 	var gameStarter = setInterval(function() {
-		if(imagesloaded == "done" && soundloaded == true) {
+		if(imagesloaded == "done") {
 			game = new Game();
-			Ticker();
 			clearInterval(gameStarter);
 		}
 	},1000/60);
 }
-function Ticker() {
-	ReadFPS();
-	GameFPStick = setInterval(function() {
-		if(window.innerHeight <= 765) {
-			document.getElementById("footer").style.color = "#FFF";
-		} else {
-			document.getElementById("footer").style.color = "#000";
-		}
-		if(!game.paused)
-			ReadFPS();
-	},1000);
-	GameTick = setInterval(function() {
-		ReadTick();
-	},1500);
-}
 var Tick = 0;
-function ReadFPS() {
-	document.getElementById("fps").innerHTML = FPS;
-	savedFPS = FPS;
-	FPS = 0;
-}
-function ReadTick() {
-	//Game Ticks
-	document.getElementById("Tick").innerHTML = Tick+"%";
-	Tick = 0;
-}
-window.onfocus = function() { if(game instanceof Game) game.paused = false; };
-window.onblur = function() { if(game instanceof Game) game.paused = true; };
+window.onfocus = function() { if(typeof game != "undefined" && game instanceof Game) game.paused = false; };
+window.onblur = function() { if(typeof game != "undefined" && game instanceof Game) game.paused = true; };
 window.onload = function() {
-	clientNetHandler = new ClientNetHandler({host : "localhost", port : 3000});
+	canvas = document.getElementsByTagName('canvas')[0];
+	ctx = canvas.getContext('2d');
+	//clientNetHandler = new ClientNetHandler({host : "localhost", port : 3000});
 	init();
 	
 }

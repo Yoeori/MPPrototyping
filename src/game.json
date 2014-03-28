@@ -1,10 +1,21 @@
 [
 	{"name" : "Class", "url" : "class.js", "server" : false, "client" : true},
-	{"name" : "fps", "url" : "fpsmeter.js", "server" : false, "client" : false},
 	{"name" : "SocketIO", "url" : "../socket.io/socket.io.js", "server" : false, "client" : true},
-	{"name" : "clientNetHandler", "url" : "network/clientNetHandler.js", "server" : false, "client" : true},
-	{"name" : "Test", "url" : "client.js", "server" : false, "client" : true},
-	{"name" : "Test", "url" : "serverOnly.js", "server" : true, "client" : false}
+	
+	{"name" : "", "url" : "cutscene/gameover.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "client.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "Game.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "Timer.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "World.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "sys/Animation.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "sys/keyboard.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "sys/ReqAni.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "sys/preloadimages.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "gui/gui.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "entities/player.js", "server" : false, "client" : true},
+	{"name" : "", "url" : "textbox/textbox.js", "server" : false, "client" : true},
+	
+	{"name" : "clientNetHandler", "url" : "network/clientNetHandler.js", "server" : false, "client" : true}
 	
 	
 	

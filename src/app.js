@@ -33,6 +33,8 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use("/css", express.static(path.join(__dirname, "css")));
 app.use("/sml", express.static(path.join(__dirname, "sml")));
+app.use("/fonts", express.static(path.join(__dirname, "fonts")));
+app.use("/sound", express.static(path.join(__dirname, "sound")));
 var blockedJS = [];
 for(gameFile in GAME.gameFiles) {
 	if(gameFiles[gameFile].client === false) 

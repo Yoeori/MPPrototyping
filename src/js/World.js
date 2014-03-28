@@ -18,7 +18,7 @@ var World = Class.extend({
 		], function(world) {
 			world.timer = new Timer(10, world);
 		});
-		sound.sounds["intro"][1]["audio"].play();
+		//sound.sounds["intro"][1]["audio"].play();
 	},
 	
 	update : function(deltaTime) {
