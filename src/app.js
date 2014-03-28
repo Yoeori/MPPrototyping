@@ -7,7 +7,7 @@ var express = require("express"),
 	gameFiles = require("./game"),
 	server = http.createServer(app);
 	
-GLOBAL["io"] = require("socket.io").listen(server, { log: false });
+GLOBAL["io"] = require("socket.io").listen(server, { "log level": 2 });
 
 io.sockets.on('connection', function (socket) {
 	socket.emit('message', { message: 'welcome to the chat' });
