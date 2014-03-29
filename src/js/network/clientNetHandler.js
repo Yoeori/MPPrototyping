@@ -1,13 +1,6 @@
 var ClientNetHandler = Class.extend({
-	 socket: 0,
-	
-	
-	init : function(server) {
-		//Connect via Socket IO
-		this.socket = io.connect((typeof server.secure !== "undefined" ? "https" : "http")+"://"+server.host+":"+server.port);
-	}
-
 	socket: 0,
+	 
 	packetHandlers : {},
 	
 	init : function(server) {
